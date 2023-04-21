@@ -20,6 +20,7 @@ function Form({onAddBand}) {
           })
             .then(r => r.json())
             .then(newBand => onAddBand(newBand));
+            e.target.reset()
     }
 
 
