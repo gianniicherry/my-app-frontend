@@ -37,13 +37,25 @@ function BandShows(){
             })
             setBands(updatedShows)
         }
+
+        function onEditBand(newDescription){
+           const updatedBands = bands.map((band) => {
+                if(band.id === newDescription.id){
+                   return newDescription
+                }
+                else {
+                    return band
+                }
+            })
+            setBands(updatedBands)
+        }
   
 
     return (
     <div>
         <div><Form onAddBand={handleAddBand}/></div>
         <div>{bands.map((band)=> (
-            <Band key={band.id} band={band} onAddShow={onAddShow}/>
+            <Band key={band.id} band={band} onAddShow={onAddShow} onEditBand={onEditBand}/>
         ))}</div>
     </div>
 )};

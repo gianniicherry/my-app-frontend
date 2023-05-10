@@ -26,7 +26,7 @@ function Form({onAddBand}) {
 
 return (
 <div>
-    <div><h2>Add an Event</h2></div>
+    <div><h2>Add a Band</h2></div>
     <form onSubmit={handleSubmit}>
         <div>
         <label> Enter your Band:
